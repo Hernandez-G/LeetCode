@@ -11,7 +11,10 @@
  * @return {ListNode}
  */
 
-// Space Complexity 0(1)
+// Tutorial: https://www.youtube.com/watch?v=eQGn1xbt1JU
+// Visual Explaination https://youtu.be/GfRQvf7MB3k
+
+// Space Complexity 0(1) = constant
 //Time Complexity O(m+n)
 
 
@@ -30,8 +33,10 @@ var mergeTwoLists = function(list1, list2) {
             curr.next = list2;
             list2 = list2.next;
         }
+//prevents overwrite of list
         curr = curr.next;
     }
+//if list1 != now > cur.next = list 1
     if(list1) {
         curr.next = list1;
     }
@@ -41,3 +46,5 @@ var mergeTwoLists = function(list1, list2) {
     console.log(JSON.stringify(newVar))
     return newVar.next;
 };
+
+
