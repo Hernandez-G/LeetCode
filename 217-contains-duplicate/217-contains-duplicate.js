@@ -2,6 +2,8 @@
  * @param {number[]} nums
  * @return {boolean}
  */
+
+// Space: O(n)
 var containsDuplicate = function(nums) {
     let hashtable = {};
     for(let i = 0; i < nums.length; i++) {
